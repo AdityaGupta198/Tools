@@ -1,0 +1,20 @@
+nmap -h
+nmap ip
+nmap -ss ip
+nmap -sT ip //tcp full handshake
+nmap -O ip //os scan
+nmap -p- ip //all port scan
+nmap 10.0.1.1/24
+nmap -A ip //aggresive scan
+nmap -Pn ip //no ping scan 
+nmap -sV --version-all ip //version 
+nmap -O --osscan-guess ip 
+nmap -T4 ip //timing
+nmap --script vuln -sV ip (runs vulnerability-related scripts
+nmap --script http-enum --script-args http-enum.maxdepth=2 ip   
+Use categories: default, safe, vuln, exploit, intrusive.
+nmap -sV -oA reports/target ip  vartion (-oN, -oX, -oG, -oA)
+nmap --traceroute ip   // --traceroute and --packet-trace  
+nmap --packet-trace -sS ip   // --traceroute and --packet-trace
+
+sudo nmap -sS -p- -T4 --min-rate 500 --max-retries 2 -sV --version-all --script vuln --script-args=unsafe=1 -oA scan_reports/target 10.0.0.123 //all combination
