@@ -1,0 +1,9 @@
+gobuster dir -u http://example.com -w /usr/share/wordlists/dirb/common.txt
+
+gobuster dir -u http://example.com -w /usr/share/wordlists/dirb/common.txt
+
+gobuster dir -u http://target.com -w /usr/share/wordlists/dirb/common.txt -t 50
+
+gobuster dir -u http://target.com -w /usr/share/wordlists/dirb/common.txt -x php,html,txt
+
+gobuster dir -u http://target.com -w /usr/share/wordlists/dirb/common.txt -o results.txt
